@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyAgenda.Views.HomePage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="AddContact" Text ="Add"  
+                Priority="0" Order="Primary" Clicked="AddContact_Clicked"/>
+        <ToolbarItem Text ="More"  
+              Priority="1" Order="Primary" />
+    </ContentPage.ToolbarItems>
+    <ListView x:Name="contactos">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout>
+                        <Label Text="{Binding Name}" FontSize="13" TextColor="DarkBlue" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
